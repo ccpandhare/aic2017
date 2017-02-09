@@ -4,8 +4,12 @@
     <meta charset="utf-8">
     <title>AIC 2017</title>
     <script src="js/jquery.min.js" charset="utf-8"></script>
+    <script src="js/jquery.scrollify.min.js" charset="utf-8"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Sansita" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Caveat+Brush" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   </head>
   <body>
     <section id="nav">
@@ -20,12 +24,12 @@
       </ul>
     </section>
     <section id="main">
-      <section id="landing">
+      <section id="landing" class="snappyscroll">
         <div id="hamburger">
           <span></span>
         </div>
       </section>
-      <section id="statements">
+      <section id="statements" class="snappyscroll">
         <div class="col-xs-6 col-sm-4 top statementopener" style="background: orange">
           <div class="sprite">
             <div class="upper" style="background-image: url(images/qwikcilver.png)">
@@ -33,7 +37,7 @@
             </div>
             <div class="lower">
               <div class="wrapper">
-                <h2>QwikcilverWoohoo</h2>
+                <h1>QwikcilverWoohoo</h1>
                 <button type="button" class="seeps">Show Problem Statement</button>
               </div>
             </div>
@@ -46,7 +50,7 @@
             </div>
             <div class="lower">
               <div class="wrapper">
-                <h2>GE Healthcare</h2>
+                <h1>GE Healthcare</h1>
                 <button type="button" class="seeps">Show Problem Statement</button>
               </div>
             </div>
@@ -59,7 +63,7 @@
             </div>
             <div class="lower">
               <div class="wrapper">
-                <h2>Universal Designovation Labs</h2>
+                <h1>Universal Designovation Labs</h1>
                 <button type="button" class="seeps">Show Problem Statement</button>
               </div>
             </div>
@@ -75,7 +79,7 @@
             </div>
             <div class="lower">
               <div class="wrapper">
-                <h2>Morgan Stanley</h2>
+                <h1>Morgan Stanley</h1>
                 <button type="button" class="seeps">Show Problem Statement</button>
               </div>
             </div>
@@ -88,7 +92,7 @@
             </div>
             <div class="lower">
               <div class="wrapper">
-                <h2>Stride</h2>
+                <h1>Stride</h1>
                 <button type="button" class="seeps">Show Problem Statement</button>
               </div>
             </div>
@@ -101,7 +105,7 @@
             </div>
             <div class="lower">
               <div class="wrapper">
-                <h2>Rolls-Royce</h2>
+                <h1>Rolls-Royce</h1>
                 <button type="button" class="seeps">Show Problem Statement</button>
               </div>
             </div>
@@ -111,7 +115,14 @@
     </section>
     <div class="clearfix"></div>
   </body>
+  <script type="text/javascript">
+    $(function() {
+      $.scrollify({
+        //section : ".snappyscroll",
+      });
+    });
+  </script>
   <script src="js/hamburger.js" charset="utf-8"></script>
-  <script src="js/scroll.js" charset="utf-8"></script>
+  <!--script src="js/scroll.js" charset="utf-8"></script-->
   <script src="js/statements.js" charset="utf-8"></script>
 </html>

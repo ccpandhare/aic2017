@@ -170,11 +170,17 @@ body:hover {
   justify-content: center;
   overflow: hidden;
 }
+.statement h1, .lower h1 {
+  font-family: Sansita;
+}
+.statement p {
+  font-family: Raleway;
+}
 .statement.inactive {
-  font-family: "Ananda Namaste";
+  font-family: "Caveat Brush";
   font-size: 15vh;
   color: darkgreen;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 .statementopener.active {
   background: #ddd;
@@ -185,7 +191,7 @@ body:hover {
   height: 20vh;
   top: 0;
   left: 0;
-  overflow: scroll;
+  overflow: hidden;
 }
 .upper {
   position: relative;
