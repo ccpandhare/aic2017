@@ -1,0 +1,244 @@
+* {padding:0; margin:0}
+body {
+  height: 100vh;
+  width: 125vw;
+  margin-left: -25vw;
+  transition: margin 0.2s ease-out;
+  overflow: hidden;
+}
+.clearfix {clear: both}
+
+body:hover {
+}
+
+/* Navigation Section */
+#nav {
+  height: 100vh;
+  width: 25vw;
+  position: relative;
+  background: #01602A;
+  float: left;
+}
+#nav ul {
+  height: 100vh;
+  width: 25vw;
+  position: relative;
+  background: transparent;
+}
+#nav ul li {
+  height: 14vh;
+  width: 25vw;
+  box-sizing: border-box;
+  border-bottom: 1px solid #1b7040;
+  list-style: none;
+  transition: background 0.4s ease;
+  display: flex;
+  align-items: center;
+}
+#nav ul li:first-of-type, #nav ul li:last-of-type {
+  height: 15vh;
+}
+#nav ul li:last-of-type {
+  border-bottom: 0px;
+}
+#nav ul li:hover {
+  background: #009640;
+  cursor: pointer;
+}
+#nav ul li span {
+  color: #fff;
+  font-family: Arial,Helvetica;
+  font-size: 100%;
+  font-weight: 600;
+  padding-left: 2.5vw;
+  text-transform: uppercase;
+}
+
+
+/* Main Section */
+#main {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  background: gray;
+  float: left;
+  overflow: auto;
+}
+
+/* Landing Section */
+#landing {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  background: blue;
+}
+#hamburger {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 105px;
+  height: 105px;
+  font-size: 0;
+  text-indent: -9999px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+#hamburger:focus {
+  outline: none;
+}
+#hamburger span {
+  display: block;
+  position: absolute;
+  top: 54px;
+  left: 28px;
+  right: 18px;
+  height: 8px;
+  background: white;
+  transition: background 0s 0.3s;
+}
+#hamburger span::before, #hamburger span::after {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background-color: #fff;
+  content: "";
+  transition-duration: 0.3s, 0.3s;
+  transition-delay: 0.3s, 0s;
+}
+#hamburger span::before {
+  top: -20px;
+  transition-property: top, transform;
+}
+#hamburger span::after {
+  bottom: -20px;
+  transition-property: bottom, transform;
+}
+#hamburger.active span {
+  background: none;
+}
+#hamburger.active span::before {
+  top: 0;
+  transform: rotate(45deg);
+  transition-delay: 0s, 0.3s;
+}
+#hamburger.active span::after {
+  bottom: 0;
+  transform: rotate(-45deg);
+  transition-delay: 0s, 0.3s;
+}
+
+/* Statements Section */
+#statements {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  background: yellow;
+}
+.statementopener {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 33vh;
+  background: lightgreen;
+  border: 1px solid white;
+  transition: width 0.3s ease, height 0.3s ease, margin-top 0.3s ease;
+  transition-delay: 0.2s, 0s, 0s;
+}
+.col-sm-12 {
+  height: 34vh;
+  background: white;
+  border: 1px solid white;
+  transition: height 0.3s ease;
+}
+.compressed {
+  height: 20vh;
+}
+.expanded {
+  height: 47vh;
+}
+.statement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.statement.inactive {
+  font-family: "Ananda Namaste";
+  font-size: 15vh;
+  color: darkgreen;
+  text-transform: uppercase;
+}
+.statementopener.active {
+  background: #ddd;
+}
+.sprite {
+  position: relative;
+  width: 100%;
+  height: 20vh;
+  top: 0;
+  left: 0;
+  overflow: scroll;
+}
+.upper {
+  position: relative;
+  height: 20vh;
+  width: 100%;
+  background: url(../images/qwikcilver.png) no-repeat center;
+  background-size: contain;
+  transition: margin-top 0.25s ease;
+  transition-delay: 0.04s;
+}
+.lower {
+  display: flex;
+  position: relative;
+  height: 20vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.lower h2 {
+  line-height: 250%;
+}
+.statementopener:hover .upper {
+  margin-top: -20vh;
+}
+.statementopener:hover {
+  cursor: pointer;
+}
+.seeps {
+  padding: 2vh 3vw;
+  background: transparent;
+  border: 3px solid #009640;
+  color: #009640;
+  transition: color 0.2s ease-out, background 0.2s ease-in;
+}
+.seeps.white {
+  border: 3px solid white;
+  color: white;
+}
+.seeps:hover {
+  background: #009640;
+  color: #fff;
+}
+.seeps.white:hover {
+  background: white;
+  color: #000;
+}
+.statementpara {
+  text-align: justify;
+  padding-bottom: 20px;
+}
+@media all and (max-width: 767px) {
+  .hidden-xs {
+    display: none;
+  }
+}
