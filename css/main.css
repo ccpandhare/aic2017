@@ -172,12 +172,18 @@ body:hover {
 }
 .statement h1, .lower h1 {
   font-family: Sansita;
+  line-height: 100%;
+}
+.statement h1 {
+  font-size: 350%;
+  line-height: 75%;
 }
 .statement p {
   font-family: Raleway;
+  font-size: 115%;
 }
 .statement.inactive {
-  font-family: "Caveat Brush";
+  font-family: Sansita;
   font-size: 15vh;
   color: darkgreen;
   text-transform: capitalize;
@@ -243,8 +249,117 @@ body:hover {
   text-align: justify;
   padding-bottom: 20px;
 }
+.statementopener.bottom.active::before, .statementopener.top.active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -30px;
+  left: 30px;
+  height: 30px;
+  width: 20px;
+  border-bottom: 15px solid red;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  z-index: 3;
+}
+.statementopener.top.active::after {
+  border-top: 15px solid red;
+  border-bottom: 0;
+  top: auto;
+  bottom: -30px;
+}
 @media all and (max-width: 767px) {
   .hidden-xs {
     display: none;
   }
+}
+
+
+/* Overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  background: transparent;
+  transition: background 0.3s ease;
+}
+.overlay.active {
+  pointer-events: all;
+  background: -webkit-radial-gradient(rgba(0,0,0,0.78), rgba(0,0,0,0.75), rgba(0,0,0,0.72), rgba(0,0,0,0.65)); /* Safari 5.1 to 6.0 */
+  background: -o-radial-gradient(rgba(0,0,0,0.78), rgba(0,0,0,0.75), rgba(0,0,0,0.72), rgba(0,0,0,0.65)); /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(rgba(0,0,0,0.78), rgba(0,0,0,0.75), rgba(0,0,0,0.72), rgba(0,0,0,0.65)); /* For Firefox 3.6 to 15 */
+  background: radial-gradient(rgba(0,0,0,0.78), rgba(0,0,0,0.75), rgba(0,0,0,0.72), rgba(0,0,0,0.65)); /* Standard syntax */
+}
+.lightbox {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  background: white;
+  transition: display 0.3s ease;
+}
+.lightbox.active {
+  display: block;
+  pointer-events: all;
+}
+.lightbox .content {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+.lightbox h1 {
+  font-family: Sansita;
+  font-size: 450%;
+  line-height: 100%;
+  margin-bottom: 25px;
+  color: #009640
+}
+.lightbox p, .lightbox ul, .lightbox li, .lightbox span {
+  font-family: Raleway;
+  font-size: 150%;
+  text-align: justify;
+  color: #009640;
+  display: block;
+}
+.lightbox p.collapse {
+  display: none;
+}
+.lightbox p.collapse.in {
+  display: block
+}
+.lightbox span.close {
+  position: relative;
+  float: right;
+  margin-right: 30px;
+  margin-top: 30px;
+  height: 100px;
+  width: 100px;
+  background: white;
+  z-index: 3;
+}
+.lightbox span.close::before, .lightbox span.close::after {
+  content: "";
+  position: absolute;
+  right: 30px;
+  top: 50px;
+  width: 50px;
+  height: 8px;
+  background: #009640;
+  transform: rotate(-45deg);
+}
+.lightbox span.close::after {
+  transform: rotate(45deg);
+}
+p.collapse {
+  color: #000;
+  margin-left: 10px;
 }

@@ -5,6 +5,7 @@
     <title>AIC 2017</title>
     <script src="js/jquery.min.js" charset="utf-8"></script>
     <script src="js/jquery.scrollify.min.js" charset="utf-8"></script>
+    <script src="js/bootstrap.min.js" charset="utf-8"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Sansita" rel="stylesheet">
@@ -15,12 +16,12 @@
     <section id="nav">
       <ul>
         <li><span>Home</span></li>
-        <li><span>Overview</span></li>
-        <li><span>Rules</span></li>
-        <li><span>Sponsor</span></li>
-        <li><span>FAQs</span></li>
-        <li><span>Contact</span></li>
-        <li><span>Register</span></li>
+        <li class="lightboxli"><span>Overview</span></li>
+        <li class="lightboxli"><span>Rules</span></li>
+        <li class="lightboxli"><span>Sponsor</span></li>
+        <li class="lightboxli"><span>FAQs</span></li>
+        <li class="lightboxli"><span>Contact</span></li>
+        <li class="lightboxli"><span>Register</span></li>
       </ul>
     </section>
     <section id="main">
@@ -43,7 +44,7 @@
             </div>
           </div>
         </div>
-        <div class="col-xs-6 col-sm-4 top statementopener">
+        <div class="col-xs-6 col-sm-4 top statementopener" style="background: yellow">
           <div class="sprite">
             <div class="upper" style="background-image: url(images/generalelectric.png);">
 
@@ -56,14 +57,14 @@
             </div>
           </div>
         </div>
-        <div class="col-xs-6 col-sm-4 top statementopener">
+        <div class="col-xs-6 col-sm-4 top statementopener" style="background: orange">
           <div class="sprite">
             <div class="upper" style="background-image: url(images/udlabs.png)">
 
             </div>
             <div class="lower">
               <div class="wrapper">
-                <h1>Universal Designovation Labs</h1>
+                <h1>UD Lab</h1>
                 <button type="button" class="seeps">Show Problem Statement</button>
               </div>
             </div>
@@ -85,7 +86,7 @@
             </div>
           </div>
         </div>
-        <div class="col-xs-6 col-sm-4 bottom statementopener">
+        <div class="col-xs-6 col-sm-4 bottom statementopener" style="background: orange">
           <div class="sprite">
             <div class="upper" style="background-image: url(images/stride.png)">
 
@@ -98,7 +99,7 @@
             </div>
           </div>
         </div>
-        <div class="col-xs-6 col-sm-4 bottom statementopener">
+        <div class="col-xs-6 col-sm-4 bottom statementopener" style="background: yellow">
           <div class="sprite">
             <div class="upper" style="background-image: url(images/rollsroyce.png)">
 
@@ -114,15 +115,26 @@
       </section>
     </section>
     <div class="clearfix"></div>
+    <div class="overlay"></div>
+    <div class="lightbox">
+      <span class="close"></span>
+      <div class="content">
+        <div class="container">
+          <h1>Title</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+      </div>
+    </div>
   </body>
   <script type="text/javascript">
     $(function() {
       $.scrollify({
-        //section : ".snappyscroll",
+        //section : "section",
       });
     });
   </script>
   <script src="js/hamburger.js" charset="utf-8"></script>
   <!--script src="js/scroll.js" charset="utf-8"></script-->
   <script src="js/statements.js" charset="utf-8"></script>
+  <script src="js/lightbox.js" charset="utf-8"></script>
 </html>

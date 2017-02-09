@@ -33,7 +33,7 @@ var statements = [
 
 function generateStatement(index) {
   if (index>2) index -= 1;
-  statement = "<div class=\"col-sm-10 col-md-8 col-lg-6\">";
+  statement = "<div class=\"col-sm-11 col-md-9 col-lg-7\">";
   statement += "<h1>"+statements[index][0]+"</h1>";
   statement += "<p class=\"statementpara\">"+statements[index][1]+"</p>";
   statement += "<button type=\"button\" class=\"seeps\">Download Problem Statement</button>";
