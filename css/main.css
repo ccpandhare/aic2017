@@ -47,11 +47,11 @@ body:hover {
 }
 #nav ul li span {
   color: #fff;
-  font-family: Arial,Helvetica;
-  font-size: 100%;
+  font-family: Sansita;
+  font-size: 200%;
   font-weight: 600;
   padding-left: 2.5vw;
-  text-transform: uppercase;
+  //text-transform: uppercase;
 }
 
 
