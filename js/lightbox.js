@@ -25,6 +25,10 @@ lightboxes = [
   [
     "Contact Us",
     "Abcd Xyz<br/>+91 9909909908<br/>something@pilani.bits-pilani.ac.in"
+  ],
+  [
+    "Register",
+    ""
   ]
 ];
 
@@ -40,10 +44,11 @@ $("li.lightboxli").click(function(){
   $(".overlay").addClass("active");
   $(".lightbox .content .container").html(generateLightbox(index));
   $(".overlay").removeClass("active");
+  $(".lightbox").fadeIn("fast");
   $(".lightbox").addClass("active");
 });
 
 $(".lightbox span.close").click(function(){
-  $(".overlay").removeClass("active");
-  $(".lightbox").removeClass("active");
+  $(".overlay").fadeOut('fast').removeClass("active");
+  $(".lightbox").fadeOut('fast').removeClass("active");
 });

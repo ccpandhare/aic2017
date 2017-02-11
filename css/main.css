@@ -62,7 +62,7 @@ body:hover {
 
 #nav ul li span {
     color: #fff;
-    font-family: Sansita;
+    font-family: "Sansita";
     font-size: 200%;
     font-weight: 600;
     padding-left: 2.5vw;
@@ -91,19 +91,24 @@ body:hover {
     right: 0;
     font-size: 17em;
     pointer-events: none;
-    color: white;
     letter-spacing: 0.1rem;
 }
 
 .letter {
+  font-family: "Ubuntu";
+    color: #fff;
+    -webkit-text-fill-color: #fff;
+    -webkit-text-stroke-color: #333;
+    -webkit-text-stroke-width: 3px;
 }
 
 #letterI {
-    font-size: 0.6em;
+    /*font-size: 0.6em;*/
     vertical-align: baseline;
-    position: relative;
-    top: 0.25em;
-    font-weight: 600;
+    /*position: relative;*/
+    /*top: 0.25em;*/
+    transform: scaleY(0.60) scaleX(0.8);
+    transform-origin: 50% 75%;
 }
 
 .conveyor-wrapper {
@@ -116,6 +121,7 @@ body:hover {
     bottom: 0;
     align-items: center;
     justify-content: center;
+    background: rgba(0,0,0,0.4)
 }
 
 .belt {
@@ -180,17 +186,17 @@ body:hover {
   }
   90% {
     top: calc(50vh - 3.8em);
-    left: calc(50vw - 15px);
+    left: calc(50vw - 8px);
     transform: rotate(0deg);
   }
   95% {
     top: calc(50vh - 3.8em - 30px);
-    left: calc(50vw - 15px);
+    left: calc(50vw - 8px);
     transform: rotate(0deg);
   }
   100% {
     top: calc(50vh - 3.8em);
-    left: calc(50vw - 15px);
+    left: calc(50vw - 8px);
     transform: rotate(0deg);
   }
 }
@@ -199,23 +205,39 @@ body:hover {
     width: 30px;
     height: 30px;
     position: absolute;
-    background: yellow;
+    background: white;
+    border: 5px solid orange;
     z-index: 2;
     border-radius: 50%;
     top: calc(50vh - 3.8em);
-    left: calc(50vw - 15px);
+    left: calc(50vw - 8px);
     animation: ballDrop 3s linear;
     transform-origin: 50% 55px;
 }
 
 .aicFadeIn {
+  font-family: "Ubuntu";
+  color: #fff;
   display: inline-flex;
   width: 100%;
   justify-content: center;
   position: absolute;
   top: calc(50vh + 4.5em);
-  font-size: 9em;
+  font-size: 2em;
 }
+
+#button {
+  font-family: "Ubuntu";
+  color: #fff;
+  display: inline-flex;
+  text-align: center;
+  width: 100%;
+  justify-content: center;
+  position: absolute;
+  top: calc(50vh + 14em);
+}
+
+/*Fjalla One <li>*/
 
 /*
 Step1
@@ -242,7 +264,8 @@ left: calc(50vw - 15px);
     height: 100vh;
     width: 100vw;
     position: relative;
-    background: blue;
+    background: url("../background.png") no-repeat center;
+    background-size: cover;
 }
 
 #hamburger {
@@ -261,6 +284,7 @@ left: calc(50vw - 15px);
     border: none;
     cursor: pointer;
     transition: background 0.3s;
+    z-index: 2;
 }
 
 #hamburger:focus {
@@ -504,7 +528,7 @@ left: calc(50vw - 15px);
 }
 
 .lightbox {
-    display: none;
+    //display: none;
     position: absolute;
     top: 0;
     left: 0;
@@ -513,10 +537,10 @@ left: calc(50vw - 15px);
     pointer-events: none;
     background: white;
     transition: display 0.3s ease;
+    z-index: 3;
 }
 
 .lightbox.active {
-    display: block;
     pointer-events: all;
 }
 
@@ -564,7 +588,7 @@ left: calc(50vw - 15px);
     height: 100px;
     width: 100px;
     background: white;
-    z-index: 3;
+    z-index: 4;
 }
 
 .lightbox span.close::before, .lightbox span.close::after {
